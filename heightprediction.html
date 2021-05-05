@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Origin Program</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-container">
+      <img class="top-cloud" src="images/cloud.png" alt="cloud-img" />
+      <h1>Origin Program</h1>
+      <h2>Prediction of Projectile's flight path</h2>
+      <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img" />
+      <img src="images/mountain.png" alt="mountain-img" />
+    </div>
+    <div class="middle-container">
+      <form class="form-content" name="Form">
+        <br />
+        <div class="form-item">
+          <label for="name">Name: </label>
+          <input
+            type="text"
+            class="input-column"
+            name="name"
+            placeholder="Full Name"
+          />
+          <span class="input-column"></span>
+        </div>
+        <br />
+        <div class="form-item">
+          <label for="datetime">Date, Time: </label>
+          <input type="datetime-local" class="input-column" name="datetime" />
+          <span class="input-column"></span>
+        </div>
+        <br />
+        <div class="form-item">
+          <label for="MassOfBody">Mass of Body (kg): </label>
+          <input type="number" class="input-column" name="MassOfBody" />
+          <span class="input-column"></span>
+        </div>
+        <br />
+        <div class="form-item">
+          <label for="HeightOfBody">Height of Body (m): </label>
+          <input type="number" class="input-column" name="HeightOfBody" />
+          <span class="input-column"></span>
+        </div>
+        <br />
+        <div id="distance" class="form-item hide">
+          <label for="distance">Distance from building (m) </label>
+          <input
+            type="number"
+            class="input-column"
+            id="distance"
+            OnChange="heightprediction()"
+          />
+          <span class="input-column"></span>
+        </div>
+        <br />
+        <h2>
+          <div id="height" class="hide">
+            <span class="sub-title">Height Origin of Fall: </span>
+            <br />
+            <span id="heightResult"> </span>
+            <br />
+            <span class="under-title">Origin Building Floor: </span>
+            <br />
+            <span id="floorResult"></span>
+          </div>
+        </h2>
+      </form>
+      <button class="button" onClick="window.print()">Print this page</button>
+    </div>
+    <div class="bottom-container">
+      <a class="footer-link" href="index.html">Home</a>
+      <a class="footer-link" href="about.html">About</a>
+      <a class="footer-link" href="heightprediction.html">Height Prediction</a>
+      <a class="footer-link" href="homicideprob.html">Homicide Probability</a>
+      <p class="copyright">© 2021 Dion Thong NTU</p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
